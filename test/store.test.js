@@ -25,4 +25,11 @@ describe('Store', function() {
       store.products[10]])).to.be.equal(99.22);
   });
 
+  it('with asket should return right duration', function() {
+    expect(store.calculateTotalDuration([
+      store.products[0],
+      store.products[4],
+      store.products[11]])).to.be.equal(1318);
+  });
+
 });
