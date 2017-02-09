@@ -78,7 +78,12 @@ function toString(currency, rateCurrency) {
 }
 
 function open() {
-  console.log(toString());
+    function toto(value)
+    {
+        console.log(toString("€", value));
+       
+    }
+  return service.getExchangeRateEUR(toto);
 }
 
 module.exports = {
