@@ -42,12 +42,17 @@ var products = [
 function findProducts(criterias) {
   var result = [];
   if(criterias.belowCost && criterias.belowDuration) {
-    for (var i = products.length - 1; i >= 0; i--) {
+       for (let i of products) {
+      if(i.price <= criterias.belowCost && i.getDuration() <= criterias.belowDuration) {
+        result.push(i);
+      }
+    }
+    /*for (var i = products.length - 1; i >= 0; i--) {
       var product = products[i];
       if(product.price <= criterias.belowCost && product.getDuration() <= criterias.belowDuration) {
         result.push(product);
       }
-    }
+    }*/
   }
   return result;
 }
