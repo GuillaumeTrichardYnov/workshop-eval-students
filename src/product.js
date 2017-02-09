@@ -6,7 +6,8 @@ function Product(name, price) {
   this.toString = function(currency, rateCurrency) {
     var currency = currency || '$';
     var rateCurrency = rateCurrency || 1;
-    return chalk.yellow(this.name) + ' cost ' + chalk.red(this.price * rateCurrency) + currency;
+    //return chalk.yellow(this.name) + ' cost ' + chalk.red(this.price * rateCurrency) + currency;
+      return `${chalk.yellow(this.name)} cost ${chalk.red(this.price * rateCurrency)} ${currency}`;
   }
 }
 
